@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    Active::Record::Base.transaction do
+    ActiveRecord::Base.transaction do
       @order = current_user.orders.build(order_params)
       @order.save
       @order.update_total_quantity

@@ -14,12 +14,12 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <% if logged_in? %>
-      <%= link_to "発注一覧", orders_path unless current_user.admin? %>
-      <%= link_to "発注する", new_order_path unless current_user.admin? %>
-      <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
+      <%= link_to "Orders", orders_path unless current_user.admin? %>
+      <%= link_to "Place Order", new_order_path unless current_user.admin? %>
+      <%= link_to "Log out", session_path(current_user.id), method: :delete %>
     <% else %>
-      <%= link_to "アカウント登録", new_user_path %>
-      <%= link_to "ログイン", new_session_path %>
+      <%= link_to "Sign up", new_user_path %>
+      <%= link_to "Log in", new_session_path %>
     <% end %>
     <%= yield %>
   </body>

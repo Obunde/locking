@@ -1,4 +1,4 @@
-<h1>発注登録</h1>
+<h1>Place Order</h1>
 
 <%= form_with(model: @order, local: true) do |form| %>
   <% if @order.errors.any? %>
@@ -15,8 +15,8 @@
   <table border=1>
     <thead>
       <tr>
-        <td>商品名</td>
-        <td>注文数</td>
+        <td>Item Name</td>
+        <td>Quantity</td>
       </tr>
     </thead>
     <tbody>
@@ -31,5 +31,5 @@
     <% end %>
     </tbody>
   </table>
-  <%= form.submit '注文する' %>
+  <%= form.submit 'Place Order' %>
 <% end %>

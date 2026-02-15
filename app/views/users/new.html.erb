@@ -1,4 +1,4 @@
-<h1>サインイン</h1>
+<h1>Sign up</h1>
 
 <%= form_with(model: @user, local: true) do |f| %>
   <% if @user.errors.any? %>
@@ -13,26 +13,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :名前 %>
+    <%= f.label :Name %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :メールアドレス %>
+    <%= f.label :Email %>
     <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :パスワード %>
+    <%= f.label :Password %>
     <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :パスワード（確認） %>
+    <%= f.label :Password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
 
   <div class="actions">
-    <%= f.submit "登録" %>
+    <%= f.submit "Sign up" %>
   </div>
 <% end %>
